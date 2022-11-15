@@ -1,28 +1,9 @@
+//Battistin Claudio
+
 #include <iostream>
 #include <string.h>
+#include "Lista.h"
 using namespace std;
-
-
-class Link {
-   
-    public:
-        Link(const string& v, Link* p = nullptr, Link* s = nullptr)
-        : value{v}, prev{p}, succ{s} {}
-
-        Link* insert(Link* p);//inserisce l'elemento prima di un altro nodo
-        Link* add(Link* p);//inserimento dopo un elemento
-        Link* erase();//rimozione elemento
-        Link* find(const string& v);//trova un elemento con un certo valore
-        void print_all();//stampa tutti i valori 
-        void push_back(Link*p);//aggiunge elemento in coda
-        Link* push_front(Link*p);//aggiunge elemento in testa
-        void pop_back();//rimuove l'elemento in coda
-        Link* pop_front();//rimuove l'elemento in testa
-    private:
-        string value;
-        Link* prev;
-        Link* succ;
-};
 
 Link* Link::insert(Link* p){
     Link* t=this;
@@ -155,63 +136,24 @@ Link* Link::pop_front(){
     return t;
 }
 
-int main(void){
-    Link* lista=new Link{"Valore 1"};
-    lista=lista->insert(new Link("Valore 2"));
-    lista=lista->insert(new Link("Valore 3"));
-    lista->print_all();
-    lista->add(new Link("Valore 4"));
-    cout<<"aggiungo valore 4\n";
-    lista->print_all();
-     lista->add(new Link("Valore 5"));
-    cout<<"aggiungo valore 5\n";
-    lista->print_all();
-    cout<<"elimino valore in p1\n";
-    lista=lista->erase();
-    lista->print_all();
-    cout<<"elimino valore in p1\n";
-    lista=lista->erase();
-    lista->print_all();
+Link* Link::advance(int n){
+    Link* t=this;
+    if(!t) return nullptr;
 
-    cout<<"cerco valore 4\n";
-    Link*t=lista->find("Valore 4");
+    while (n<0)
+    {
 
-    if(t){
-        cout<<"trovato\n";
+        t=t->succ;
+        if(!t) return nullptr;
+        n++;
     }
-    else{
-        cout<<"non trovato\n";
+    while (n>0)
+    {
+        t=t->succ;
+        if(!t) return nullptr;
+        n--;
     }
+    
+    return t;
 
-    cout<<"elimino valore 4\n";
-    lista=t->erase();
-    lista->print_all();
-
-    cout<<"cerco Valore 7\n";
-    t=lista->find("valore 7");
-
-    if(t){
-        cout<<"trovato\n";
-    }
-    else{
-        cout<<"non trovato\n";
-    }
-
-    cout<<"aggiungo in coda Valore 15\n";
-    lista->push_back(new Link("Valore 15"));
-    lista->print_all();
-
-    cout<<"aggiungo in testa Valore 19\n";
-    lista->push_back(new Link("Valore 19"));
-    lista->print_all();
-
-    cout<<"rimuovo in coda\n";
-    lista->pop_back();
-    lista->print_all();
-
-    cout<<"rimuovo in testa\n";
-    lista=lista->pop_front();
-    lista->print_all();
-
-    return 0;
 }
