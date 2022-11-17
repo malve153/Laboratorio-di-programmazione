@@ -1,5 +1,10 @@
+/*
+@Clauze @gioia @malve
+*/
+
 #include <iostream>
 using namespace std;
+
 
 class Date
 {
@@ -20,7 +25,7 @@ private:
 
 };
 
-Date::Date(int yy, Month mm, int dd) 
+Date::Date(int yy, Month mm, int dd)
     :year{yy},month{mm},day{dd}
 {
     if(!isValid()) throw InvalidDate();
@@ -70,6 +75,8 @@ class Isbn
         bool isValid();
     public:
         Isbn(int v1,int v2,int v3,char val );
+        friend ostream& operator<<(ostream& os,const Isbn &isbn);
+
 };
 
 Isbn::Isbn(int v1,int v2,int v3,char val)
@@ -79,53 +86,86 @@ Isbn::Isbn(int v1,int v2,int v3,char val)
 }
 
 bool Isbn::isValid(){
+
     if((n1<0 || n1>999) || (n2<0 || n2>999) || (n3<0 || n3>999))return false;
-    if(x<48 || (x>57 && x<65) || x>90)  return false;//lowercase
+    
+    if(x<48 || (x>57 && x<65) || (x>90 && x<97) || x>122)  return false;
+
     return true;
+}
+
+ostream& operator<<(ostream& os,const Isbn &isbn){
+
+    if(isbn.n1>=0 && isbn.n1<=9) os<< "00" << isbn.n1;
+    else if(isbn.n1>=10 && isbn.n1<=99) os << "0" << isbn.n1;
+    else os << isbn.n1;
+
+    if(isbn.n2>=0 && isbn.n2<=9) os << "-00" << isbn.n2;
+    else if(isbn.n2>=10 && isbn.n2<=99) os << "-0" << isbn.n2;
+    else os << "-" << isbn.n2;
+
+    if(isbn.n3>=0 && isbn.n3<=9) os << "-00" << isbn.n3;
+    else if(isbn.n3>=10 && isbn.n3<=99) os << "-0" << isbn.n3;
+    else os << "-" << isbn.n3;
+
+    return os<< "-" << isbn.x << "\n";
+
 }
 
 
 //Classe book
-/*class Book
+class Book
 {
 private:
-    //Isbn isbn;
+    Isbn isbn;
     string titolo;
     string nome;
     string cognome;
-    //Date dataCopyright;
+    Date dataCopyright;
     bool stato;
 
 public:
 
-    Book(const string& titolo,const string& nome,const string& cognome,bool stato /*Date dataCopyright,Isbn isbn*/ //);
-    /*Isbn */
-   /* string getTitolo();
+    Book(const string& tit,const string& nom,const string& cog,bool sta, Date dataCop,Isbn i);
+    string getTitolo();
     string getNome();
     string getCognome();
     bool getStato();
     bool prestito();
     bool restituzione();
-    bool operator==();
-    bool operator!=();
-    ostream& operator<<(ostream& os,const Book &libro);
-    ~Book();
+    //bool operator==();
+    //bool operator!=();
+    friend ostream& operator<<(ostream& os,const Book &libro);
 };
 
-Book::Book()
+Book::Book(const string& tit,const string& nom,const string& cog,bool sta, Date dataCop,Isbn i)
+    : titolo{tit}, nome{nom}, cognome{cog}, stato{sta}, dataCopyright{dataCop}, isbn{i}
 {
+
 }
 
-Book::~Book()
-{
-}8
-*/
+ostream& operator<<(ostream& os,const Book &libro){
+
+    os << "\n\nTitolo: " << libro.titolo << "\nAutore: " << libro.nome << " " << libro.cognome;
+
+    if(libro.stato) os << "\nStato: disponibile"; 
+    else os << "\nStato: in prestito";
+
+    os << "\nData copyright: " /*<< libro.dataCopyright*/ << "\nISBN: " << libro.isbn; //manca operator della data
+
+    return os;
+}
+
 
 int main(void){
 
     
     cout<<"creo";
-    Isbn i{1,2,3,'W'};
+    Isbn i{9,99,999,'Z'};
+    cout<<"\n"<<i;
 
+    Book b{"c++","marco","rossi",false,Date{2000,Date::Month::apr,22},i};
+    cout<<"\nlibro"<<b;
+    
     return 0;
 }
