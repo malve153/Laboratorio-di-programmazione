@@ -81,6 +81,8 @@ class Isbn
     public:
         class InvalidIsbn{};
         Isbn(int v1,int v2,int v3,char val );
+        bool operator==(const Isbn &code);
+        bool operator!=(const Isbn &code);
         friend ostream& operator<<(ostream& os,const Isbn &isbn);
 
 };
@@ -98,6 +100,18 @@ bool Isbn::isValid(){
     if(x<48 || (x>57 && x<65) || (x>90 && x<97) || x>122)  return false;
 
     return true;
+}
+
+bool Isbn::operator==(const Isbn &code){
+    if((this->n1 == code.n1) && (this->n2 == code.n2) && (this->n3 == code.n3) && (this->x == code.x))
+        return true;
+    else return false;
+}
+
+bool Isbn::operator!=(const Isbn &code){
+    if((this->n1 != code.n1) || (this->n2 != code.n2) || (this->n3 != code.n3) || (this->x != code.x))
+        return true;
+    else return false;
 }
 
 ostream& operator<<(ostream& os,const Isbn &isbn){
@@ -139,13 +153,14 @@ public:
     bool getStato();
     bool prestito();
     bool restituzione();
-    //bool operator==();
-    //bool operator!=();
+    bool operator==(const Book &libro);
+    bool operator!=(const Book &libro);
     friend ostream& operator<<(ostream& os,const Book &libro);
 };
 
-Book::Book(const string& tit,const string& nom,const string& cog,bool sta, Date dataCop,Isbn i)
-    : titolo{tit}, nome{nom}, cognome{cog}, stato{sta},dataCopyright{dataCop},isbn{i}  
+Book::Book(const string& tit,const string& nom,const string& cog,bool sta=true, Date dataCop,Isbn i)
+    : titolo{tit}, nome{nom}, cognome{cog}, stato{sta}, dataCopyright{dataCop}, isbn{i}
+{
 
 {}
 
@@ -165,6 +180,32 @@ bool Book::getStato() {
     return this->stato;
 }
 
+bool Book::prestito(){
+    if(!this->stato) return false;
+    else{
+        this->stato = false;
+        return true;
+    }
+}
+
+bool Book::restituzione(){
+    if(this->stato) return false;
+    else{
+        this->stato = true;
+        return true;
+    }
+}
+
+bool Book::operator==(const Book &libro){
+    if(isbn == libro.isbn) return true;
+    else return false;
+}
+
+bool Book::operator!=(const Book &libro){
+    if(this->isbn != libro.isbn) return true;
+    else return false;
+}
+
 ostream& operator<<(ostream& os,const Book &libro){
 
     os << "\n\nTitolo: " << libro.titolo << "\nAutore: " << libro.nome << " " << libro.cognome;
@@ -182,6 +223,7 @@ int main(void){
     
     cout<<"creo";
     Isbn i{9,99,999,'Z'};
+    Isbn i2{4,229,423,'F'};
     cout<<"\n"<<i;
     
     try{
@@ -227,6 +269,20 @@ int main(void){
     
 
 
-    
+    Book b{"c++","marco","rossi",false,Date{2000,Date::Month::apr,22},i};
+    Book b2{"esploratore","carlo","mariconda",true,Date{2000,Date::Month::apr,22},i2};
+    if(b==b2) cout << "== libri uguali\n";
+    else cout << "== libri diversi\n";
+    if(b!=b2) cout << "!= libri diversi\n";
+    else cout << "!=libri uguali\n";
+    cout<<"\nlibro"<<b;
+    cout << "\nlibro"<<b2;
+    if(b.restituzione()) cout << "\n\nlibro restituito correttamente\n";
+    else cout << "\n\nRestituzione fallita, libro già disponibile\n";
+    if(b2.prestito()) cout << "libro prestato correttamente\n";
+    else cout << "impossibile effettuare il prestito, libro non disponibile\n";
+    cout<<"\nlibro"<<b;
+    cout << "\nlibro"<<b2;
+
     return 0;
 }
