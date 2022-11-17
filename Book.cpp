@@ -152,10 +152,26 @@ public:
     friend ostream& operator<<(ostream& os,const Book &libro);
 };
 
-Book::Book(const string& tit,const string& nom,const string& cog,bool sta, Date dataCop,Isbn i)
+Book::Book(const string& tit,const string& nom,const string& cog,bool sta=true, Date dataCop,Isbn i)
     : titolo{tit}, nome{nom}, cognome{cog}, stato{sta}, dataCopyright{dataCop}, isbn{i}
 {
 
+}
+
+bool Book::prestito(){
+    if(!this->stato) return false;
+    else{
+        this->stato = false;
+        return true;
+    }
+}
+
+bool Book::restituzione(){
+    if(this->stato) return false;
+    else{
+        this->stato = true;
+        return true;
+    }
 }
 
 bool Book::operator==(const Book &libro){
@@ -190,13 +206,19 @@ int main(void){
     cout<<"\n"<<i;
 
     Book b{"c++","marco","rossi",false,Date{2000,Date::Month::apr,22},i};
-    Book b2{"esploratore","carlo","mariconda",false,Date{2000,Date::Month::apr,22},i2};
+    Book b2{"esploratore","carlo","mariconda",true,Date{2000,Date::Month::apr,22},i2};
     if(b==b2) cout << "== libri uguali\n";
     else cout << "== libri diversi\n";
     if(b!=b2) cout << "!= libri diversi\n";
     else cout << "!=libri uguali\n";
     cout<<"\nlibro"<<b;
     cout << "\nlibro"<<b2;
-    
+    if(b.restituzione()) cout << "\n\nlibro restituito correttamente\n";
+    else cout << "\n\nRestituzione fallita, libro già disponibile\n";
+    if(b2.prestito()) cout << "libro prestato correttamente\n";
+    else cout << "impossibile effettuare il prestito, libro non disponibile\n";
+    cout<<"\nlibro"<<b;
+    cout << "\nlibro"<<b2;
+
     return 0;
 }
