@@ -1,8 +1,8 @@
 /*
 @Clauze @gioia @malve
 */
-
 #include <iostream>
+#include <string>
 using namespace std;
 
 
@@ -78,9 +78,12 @@ class Isbn
         int n3;
         char x;
         bool isValid();
+        bool isValidString(const char* isbn);
+        
     public:
         class InvalidIsbn{};
-        Isbn(int v1,int v2,int v3,char val );
+        Isbn(int v1,int v2,int v3,char val);
+        Isbn(const char* isbn);
         bool operator==(const Isbn &code);
         bool operator!=(const Isbn &code);
         friend ostream& operator<<(ostream& os,const Isbn &isbn);
@@ -93,6 +96,11 @@ Isbn::Isbn(int v1,int v2,int v3,char val)
     if(!isValid()) throw InvalidIsbn();
 }
 
+Isbn::Isbn(const char* isbn)
+{
+    if(!isValidString(isbn)) throw InvalidIsbn();
+}
+
 bool Isbn::isValid(){
 
     if((n1<0 || n1>999) || (n2<0 || n2>999) || (n3<0 || n3>999))return false;
@@ -100,6 +108,34 @@ bool Isbn::isValid(){
     if(x<48 || (x>57 && x<65) || (x>90 && x<97) || x>122)  return false;
 
     return true;
+}
+
+bool Isbn::isValidString(const char* isbn){
+    int size=0;
+    string s="";
+    
+    while(isbn[size]!='\0') {
+        size++;
+    }
+    
+    if(size!=13) return false;
+    else {
+    	try {
+    		n1 = (isbn[0]-'0')*100 + (isbn[1]-'0')*10 + (isbn[2]-'0');
+    		n2 = (isbn[4]-'0')*100 + (isbn[5]-'0')*10 + (isbn[6]-'0');
+    		n3 = (isbn[8]-'0')*100 + (isbn[9]-'0')*10 + (isbn[10]-'0');
+		}
+		catch(invalid_argument) {
+			cout << "isbn non valido";
+			return false;
+		}
+		
+		x = isbn[12];
+		
+		if(x<48 || (x>57 && x<65) || (x>90 && x<97) || x>122)  return false;
+		
+		return true;
+	}
 }
 
 bool Isbn::operator==(const Isbn &code){
@@ -146,7 +182,8 @@ private:
 
 public:
 
-    Book(const string& tit,const string& nom,const string& cog,bool sta, Date dataCop,Isbn i);
+    Book(const string& nom,const string& cog, const string& tit, bool sta, Date dataCop,Isbn i);
+    Book(const string& nom,const string& cog, const string& tit,const char* i, bool sta, Date dataCop);
     string getTitolo();
     string getNome();
     string getCognome();
@@ -158,10 +195,12 @@ public:
     friend ostream& operator<<(ostream& os,const Book &libro);
 };
 
-Book::Book(const string& tit,const string& nom,const string& cog,bool sta=true, Date dataCop,Isbn i)
+Book::Book(const string& nom,const string& cog,const string& tit,bool sta=true, Date dataCop = Date{1970,Date::Month::jan,1},Isbn i = Isbn{000,000,000,0})
     : titolo{tit}, nome{nom}, cognome{cog}, stato{sta}, dataCopyright{dataCop}, isbn{i}
-{
+{}
 
+Book::Book(const string& nom,const string& cog,const string& tit, const char* is = "000-000-000-0", bool sta=true, Date dataCop = Date{1970,Date::Month::jan,1})
+    : titolo{tit}, nome{nom}, cognome{cog}, stato{sta}, dataCopyright{dataCop}, isbn{Isbn{is}}
 {}
 
 string Book::getTitolo() {
@@ -227,7 +266,7 @@ int main(void){
     cout<<"\n"<<i;
     
     try{
-        Book b{"c++","marco","rossi",true,Date{2000,Date::Month::apr,5}, Isbn{9,99,150,'Z'}};
+        Book b{"marco","rossi","c++",true,Date{2000,Date::Month::apr,5}, Isbn{9,99,150,'Z'}};
         cout<<"\nlibro"<<b;
         if(b.prestito()){
             cout<<"\nLibro correttamente preso in prestito\n";
@@ -247,7 +286,7 @@ int main(void){
     }
 
     try{
-        Book b{"g++","marco","rossi",false,Date{2000,Date::Month::apr,5}, Isbn{9,99,150,'Z'}};
+        Book b{"marco","rossi","g++",false,Date{2000,Date::Month::apr,5}, Isbn{9,99,150,'Z'}};
         cout<<"\nlibro"<<b;
         if(b.prestito()){
             cout<<"\nLibro correttamente preso in prestito\n";
@@ -269,8 +308,8 @@ int main(void){
     
 
 
-    Book b{"c++","marco","rossi",false,Date{2000,Date::Month::apr,22},i};
-    Book b2{"esploratore","carlo","mariconda",true,Date{2000,Date::Month::apr,22},i2};
+    Book b{"marco","rossi","c++",false,Date{2000,Date::Month::apr,22},i};
+    Book b2{"carlo","mariconda","esploratore",true,Date{2000,Date::Month::apr,22},i2};
     if(b==b2) cout << "== libri uguali\n";
     else cout << "== libri diversi\n";
     if(b!=b2) cout << "!= libri diversi\n";
@@ -278,13 +317,20 @@ int main(void){
     cout<<"\nlibro"<<b;
     cout << "\nlibro"<<b2;
     if(b.restituzione()) cout << "\n\nlibro restituito correttamente\n";
-    else cout << "\n\nRestituzione fallita, libro già disponibile\n";
+    else cout << "\n\nRestituzione fallita, libro gi� disponibile\n";
     if(b2.prestito()) cout << "libro prestato correttamente\n";
     else cout << "impossibile effettuare il prestito, libro non disponibile\n";
     cout<<"\nlibro"<<b;
     cout << "\nlibro"<<b2;
 
-    vector<Book> shelf(10);
-
+    //vector<Book> shelf(10);
+    try{
+        Book my_favourite_book("David", "Foster Wallace", "Una cosa divertente che non faro' mai piu'", "999-999-150-Z");
+        cout << "\n" << my_favourite_book;
+    }
+    catch(Isbn::InvalidIsbn){
+        cerr<<"\ninserito isbn non valido\n";
+    }
+    
     return 0;
 }
