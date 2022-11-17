@@ -15,6 +15,7 @@ public:
     };
 
     Date(int yy, Month mm, int dd);
+    friend ostream& operator<<(ostream& os,const Date &data);
     
 private:
 
@@ -63,17 +64,22 @@ bool Date::isValid(){
 
 }
 
+ostream& operator<<(ostream& os,const Date &data) {
+
+    return os << data.day << "/" << data.month << "/" << data.year;
+}
+
 //Classe isbn
 class Isbn
 {
     private:
-        class InvalidIsbn{};
         int n1;
         int n2;
         int n3;
         char x;
         bool isValid();
     public:
+        class InvalidIsbn{};
         Isbn(int v1,int v2,int v3,char val );
         friend ostream& operator<<(ostream& os,const Isbn &isbn);
 
@@ -139,9 +145,24 @@ public:
 };
 
 Book::Book(const string& tit,const string& nom,const string& cog,bool sta, Date dataCop,Isbn i)
-    : titolo{tit}, nome{nom}, cognome{cog}, stato{sta}, dataCopyright{dataCop}, isbn{i}
-{
+    : titolo{tit}, nome{nom}, cognome{cog}, stato{sta},dataCopyright{dataCop},isbn{i}  
 
+{}
+
+string Book::getTitolo() {
+    return this->titolo;
+}
+
+string Book::getNome() {
+    return this->nome;
+}
+
+string Book::getCognome() {
+    return this->cognome;
+}
+
+bool Book::getStato() {
+    return this->stato;
 }
 
 ostream& operator<<(ostream& os,const Book &libro){
@@ -151,21 +172,61 @@ ostream& operator<<(ostream& os,const Book &libro){
     if(libro.stato) os << "\nStato: disponibile"; 
     else os << "\nStato: in prestito";
 
-    os << "\nData copyright: " /*<< libro.dataCopyright*/ << "\nISBN: " << libro.isbn; //manca operator della data
+    os << "\nData copyright: " << libro.dataCopyright << "\nISBN: " << libro.isbn; 
 
     return os;
 }
 
 
 int main(void){
-
     
     cout<<"creo";
     Isbn i{9,99,999,'Z'};
     cout<<"\n"<<i;
+    
+    try{
+        Book b{"c++","marco","rossi",true,Date{2000,Date::Month::apr,5}, Isbn{9,99,150,'Z'}};
+        cout<<"\nlibro"<<b;
+        if(b.prestito()){
+            cout<<"\nLibro correttamente preso in prestito\n";
+        }
+        else cout << "\nLibro non disponibile";
 
-    Book b{"c++","marco","rossi",false,Date{2000,Date::Month::apr,22},i};
-    cout<<"\nlibro"<<b;
+        if(b.restituzione()){
+            cout<<"\nLibro correttamente restituito dal prestito";
+        }
+        else cout << "\nIl libro non era in prestito";
+    }
+    catch(Date::InvalidDate){
+        cerr<<"inserita data non valida";
+    }
+    catch(Isbn::InvalidIsbn){
+        cerr<<"inserito isbn non valido";
+    }
+
+    try{
+        Book b{"g++","marco","rossi",false,Date{2000,Date::Month::apr,5}, Isbn{9,99,150,'Z'}};
+        cout<<"\nlibro"<<b;
+        if(b.prestito()){
+            cout<<"\nLibro correttamente preso in prestito\n";
+        }
+        else cout << "\nLibro non disponibile";
+
+        if(b.restituzione()){
+            cout<<"\nLibro correttamente restituito dal prestito";
+        }
+        else cout << "\nIl libro non era in prestito";
+    }
+    catch(Date::InvalidDate){
+        cerr<<"inserita data non valida";
+    }
+    catch(Isbn::InvalidIsbn){
+        cerr<<"inserito isbn non valido";
+    }
+
+    
+
+
     
     return 0;
 }
