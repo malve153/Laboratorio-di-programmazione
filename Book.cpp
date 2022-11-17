@@ -284,5 +284,7 @@ int main(void){
     cout<<"\nlibro"<<b;
     cout << "\nlibro"<<b2;
 
+    vector<Book> shelf(10);
+
     return 0;
 }
