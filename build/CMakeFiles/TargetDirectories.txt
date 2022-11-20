@@ -1,6 +1,6 @@
-C:/Users/User/Documents/GitHub/Laboratorio-di-programmazione/build/CMakeFiles/Isbn.dir
-C:/Users/User/Documents/GitHub/Laboratorio-di-programmazione/build/CMakeFiles/Date.dir
-C:/Users/User/Documents/GitHub/Laboratorio-di-programmazione/build/CMakeFiles/Book.dir
-C:/Users/User/Documents/GitHub/Laboratorio-di-programmazione/build/CMakeFiles/main.dir
-C:/Users/User/Documents/GitHub/Laboratorio-di-programmazione/build/CMakeFiles/edit_cache.dir
-C:/Users/User/Documents/GitHub/Laboratorio-di-programmazione/build/CMakeFiles/rebuild_cache.dir
+C:/Users/Claudio/Desktop/Laboratorio di programmazione/Laboratorio-di-programmazione/Laboratorio-di-programmazione/build/CMakeFiles/Isbn.dir
+C:/Users/Claudio/Desktop/Laboratorio di programmazione/Laboratorio-di-programmazione/Laboratorio-di-programmazione/build/CMakeFiles/Date.dir
+C:/Users/Claudio/Desktop/Laboratorio di programmazione/Laboratorio-di-programmazione/Laboratorio-di-programmazione/build/CMakeFiles/Book.dir
+C:/Users/Claudio/Desktop/Laboratorio di programmazione/Laboratorio-di-programmazione/Laboratorio-di-programmazione/build/CMakeFiles/main.dir
+C:/Users/Claudio/Desktop/Laboratorio di programmazione/Laboratorio-di-programmazione/Laboratorio-di-programmazione/build/CMakeFiles/edit_cache.dir
+C:/Users/Claudio/Desktop/Laboratorio di programmazione/Laboratorio-di-programmazione/Laboratorio-di-programmazione/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc libIsbn.a CMakeFiles/Isbn.dir/src/Isbn.cpp.obj
+C:\MinGW\bin\ranlib.exe libIsbn.a
