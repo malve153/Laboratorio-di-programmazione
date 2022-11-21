@@ -56,26 +56,26 @@ public:
      * 
      * @return std::string 
      */
-    std::string getTitolo();
+    std::string getTitolo(){ return this->titolo; }
     /**
      * @brief Get the Nome object
      * 
      * @return std::string 
      */
-    std::string getNome();
+    std::string getNome() { return this->nome; }
     /**
      * @brief Get the Cognome object
      * 
      * @return std::string 
      */
-    std::string getCognome();
+    std::string getCognome(){ return this->cognome; }
     /**
      * @brief Get the Stato object
      * 
      * @return true 
      * @return false 
      */
-    bool getStato();
+    bool getStato() { return this->stato; }
     /**
      * @brief 
      * 

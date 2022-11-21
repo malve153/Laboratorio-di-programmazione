@@ -62,7 +62,7 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "C:/Users/Claudio/Desktop/Laboratorio di programmazione/Laboratorio-di-programmazione/Laboratorio-di-programmazione/include"
+					"path" : "C:/Users/User/Documents/GitHub/Laboratorio-di-programmazione/include"
 				}
 			],
 			"language" : "CXX",
@@ -84,15 +84,15 @@
 	[
 		{
 			"backtrace" : 2,
+			"id" : "Book::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 2,
 			"id" : "Isbn::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 2,
 			"id" : "Date::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 2,
-			"id" : "Book::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "main::@6890427a1f51a3e7e1df",
