@@ -4,23 +4,6 @@
 #include <iostream>
 #include "Book.h"
 
-
-std::string Book::getTitolo() {
-    return this->titolo;
-}
-
-std::string Book::getNome() {
-    return this->nome;
-}
-
-std::string Book::getCognome() {
-    return this->cognome;
-}
-
-bool Book::getStato() {
-    return this->stato;
-}
-
 bool Book::prestito(){
     if(!this->stato) return false;
     else{
