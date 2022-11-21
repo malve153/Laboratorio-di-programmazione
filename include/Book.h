@@ -5,48 +5,49 @@
 #include "Isbn.h"
 /**
  * @brief Classe Book usata per la manipolazione di un libro
+ * @author Anello Gioia,Claudio Battistin, Andrea Malvestio
 */
 class Book
 {
 private:
 
-    Isbn isbn;/**!< */
-    std::string titolo;/**!< */
-    std::string nome;/**!< */
-    std::string cognome;/**!<*/
-    Date dataCopyright;/**!< */
-    bool stato;/**!< */
+    Isbn isbn;/**!< Codice identificativo del libro*/
+    std::string titolo;/**!< Titolo del libro*/
+    std::string nome;/**!< Nome autore*/
+    std::string cognome;/**!< Cognome autore*/
+    Date dataCopyright;/**!< Data copyright*/
+    bool stato;/**!< True se disponibile e false se in prestito*/
 
 public:
     /**
-     * @brief Construct a new Book object
+     * @brief Costruttore di default
      * 
      */
     Book()
         : titolo{""}, nome{""}, cognome{""}, stato{true}, dataCopyright{Date{1970,Date::Month::jan,1}}, isbn{"000-000-000-0"}
     {}
     /**
-     * @brief Construct a new Book object
+     * @brief Costruttore con parametri e Isbn passato come oggetto
      * 
-     * @param nom 
-     * @param cog 
-     * @param tit 
-     * @param sta 
-     * @param dataCop 
-     * @param i 
+     * @param nom nome autore
+     * @param cog cognome autore
+     * @param tit titolo libro
+     * @param sta stato del libro
+     * @param dataCop data copyright
+     * @param i codice identificativo libro isbn
      */
     Book(const std::string& nom,const std::string& cog, const std::string& tit, bool sta, Date dataCop,Isbn i)
         : titolo{tit}, nome{nom}, cognome{cog}, stato{sta}, dataCopyright{dataCop}, isbn{i}
         {}
     /**
-     * @brief Construct a new Book object
+     * @brief Costruttore con parametri e Isbn passato come puntatore char
      * 
-     * @param nom 
-     * @param cog 
-     * @param tit 
-     * @param is 
-     * @param sta 
-     * @param dataCop 
+     * @param nom nome autore
+     * @param cog cognome autore
+     * @param tit titolo libro
+     * @param sta stato del libro
+     * @param dataCop data copyright
+     * @param is codice identificativo libro isbn
      */
     Book(const std::string& nom,const std::string& cog, const std::string& tit,const char* is = "000-000-000-0", bool sta = true, Date dataCop = Date{1970,Date::Month::jan,1})
         : titolo{tit}, nome{nom}, cognome{cog}, stato{sta}, dataCopyright{dataCop}, isbn{Isbn{is}}

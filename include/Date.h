@@ -4,6 +4,7 @@
 
 /**
  * @brief Classe Date usata per la manipolazione delle date
+ * @author Anello Gioia,Claudio Battistin, Andrea Malvestio
 */
 
 class Date

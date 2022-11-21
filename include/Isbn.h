@@ -4,6 +4,7 @@
 
 /**
  * @brief Classe Isbn usata per la gestione dell'Isbn di un libro
+ * @author Anello Gioia,Claudio Battistin, Andrea Malvestio
 */
 
 class Isbn
