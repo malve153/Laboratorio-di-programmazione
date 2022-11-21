@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/Claudio/Desktop/Laboratorio di programmazione/Laboratorio-di-programmazione/Laboratorio-di-programmazione/src/Date.cpp" "CMakeFiles/Date.dir/src/Date.cpp.obj" "gcc" "CMakeFiles/Date.dir/src/Date.cpp.obj.d"
+  "C:/Users/claud/Desktop/Lab di programmazione/Laboratorio-di-programmazione/src/Date.cpp" "CMakeFiles/Date.dir/src/Date.cpp.obj" "gcc" "CMakeFiles/Date.dir/src/Date.cpp.obj.d"
   )
 
 # Targets to which this target links.

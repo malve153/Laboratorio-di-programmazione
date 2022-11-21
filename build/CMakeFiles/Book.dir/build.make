@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione"
+CMAKE_SOURCE_DIR = "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\build"
+CMAKE_BINARY_DIR = "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Book.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/Book.dir/flags.make
 
 CMakeFiles/Book.dir/src/Book.cpp.obj: CMakeFiles/Book.dir/flags.make
 CMakeFiles/Book.dir/src/Book.cpp.obj: CMakeFiles/Book.dir/includes_CXX.rsp
-CMakeFiles/Book.dir/src/Book.cpp.obj: C:/Users/Claudio/Desktop/Laboratorio\ di\ programmazione/Laboratorio-di-programmazione/Laboratorio-di-programmazione/src/Book.cpp
+CMakeFiles/Book.dir/src/Book.cpp.obj: C:/Users/claud/Desktop/Lab\ di\ programmazione/Laboratorio-di-programmazione/src/Book.cpp
 CMakeFiles/Book.dir/src/Book.cpp.obj: CMakeFiles/Book.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Book.dir/src/Book.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Book.dir/src/Book.cpp.obj -MF CMakeFiles\Book.dir\src\Book.cpp.obj.d -o CMakeFiles\Book.dir\src\Book.cpp.obj -c "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\src\Book.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Book.dir/src/Book.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Book.dir/src/Book.cpp.obj -MF CMakeFiles\Book.dir\src\Book.cpp.obj.d -o CMakeFiles\Book.dir\src\Book.cpp.obj -c "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\src\Book.cpp"
 
 CMakeFiles/Book.dir/src/Book.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Book.dir/src/Book.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\src\Book.cpp" > CMakeFiles\Book.dir\src\Book.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\src\Book.cpp" > CMakeFiles\Book.dir\src\Book.cpp.i
 
 CMakeFiles/Book.dir/src/Book.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Book.dir/src/Book.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\src\Book.cpp" -o CMakeFiles\Book.dir\src\Book.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\src\Book.cpp" -o CMakeFiles\Book.dir\src\Book.cpp.s
 
 # Object files for target Book
 Book_OBJECTS = \
@@ -93,7 +93,7 @@ Book_EXTERNAL_OBJECTS =
 libBook.a: CMakeFiles/Book.dir/src/Book.cpp.obj
 libBook.a: CMakeFiles/Book.dir/build.make
 libBook.a: CMakeFiles/Book.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libBook.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libBook.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\Book.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Book.dir\link.txt --verbose=$(VERBOSE)
 
@@ -106,6 +106,6 @@ CMakeFiles/Book.dir/clean:
 .PHONY : CMakeFiles/Book.dir/clean
 
 CMakeFiles/Book.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione" "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione" "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\build" "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\build" "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\build\CMakeFiles\Book.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione" "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione" "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\build" "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\build" "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\build\CMakeFiles\Book.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/Book.dir/depend
 

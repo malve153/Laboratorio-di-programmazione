@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione"
+CMAKE_SOURCE_DIR = "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\build"
+CMAKE_BINARY_DIR = "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Isbn.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/Isbn.dir/flags.make
 
 CMakeFiles/Isbn.dir/src/Isbn.cpp.obj: CMakeFiles/Isbn.dir/flags.make
 CMakeFiles/Isbn.dir/src/Isbn.cpp.obj: CMakeFiles/Isbn.dir/includes_CXX.rsp
-CMakeFiles/Isbn.dir/src/Isbn.cpp.obj: C:/Users/Claudio/Desktop/Laboratorio\ di\ programmazione/Laboratorio-di-programmazione/Laboratorio-di-programmazione/src/Isbn.cpp
+CMakeFiles/Isbn.dir/src/Isbn.cpp.obj: C:/Users/claud/Desktop/Lab\ di\ programmazione/Laboratorio-di-programmazione/src/Isbn.cpp
 CMakeFiles/Isbn.dir/src/Isbn.cpp.obj: CMakeFiles/Isbn.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Isbn.dir/src/Isbn.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Isbn.dir/src/Isbn.cpp.obj -MF CMakeFiles\Isbn.dir\src\Isbn.cpp.obj.d -o CMakeFiles\Isbn.dir\src\Isbn.cpp.obj -c "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\src\Isbn.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Isbn.dir/src/Isbn.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Isbn.dir/src/Isbn.cpp.obj -MF CMakeFiles\Isbn.dir\src\Isbn.cpp.obj.d -o CMakeFiles\Isbn.dir\src\Isbn.cpp.obj -c "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\src\Isbn.cpp"
 
 CMakeFiles/Isbn.dir/src/Isbn.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Isbn.dir/src/Isbn.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\src\Isbn.cpp" > CMakeFiles\Isbn.dir\src\Isbn.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\src\Isbn.cpp" > CMakeFiles\Isbn.dir\src\Isbn.cpp.i
 
 CMakeFiles/Isbn.dir/src/Isbn.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Isbn.dir/src/Isbn.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\src\Isbn.cpp" -o CMakeFiles\Isbn.dir\src\Isbn.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\src\Isbn.cpp" -o CMakeFiles\Isbn.dir\src\Isbn.cpp.s
 
 # Object files for target Isbn
 Isbn_OBJECTS = \
@@ -93,7 +93,7 @@ Isbn_EXTERNAL_OBJECTS =
 libIsbn.a: CMakeFiles/Isbn.dir/src/Isbn.cpp.obj
 libIsbn.a: CMakeFiles/Isbn.dir/build.make
 libIsbn.a: CMakeFiles/Isbn.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libIsbn.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libIsbn.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\Isbn.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Isbn.dir\link.txt --verbose=$(VERBOSE)
 
@@ -106,6 +106,6 @@ CMakeFiles/Isbn.dir/clean:
 .PHONY : CMakeFiles/Isbn.dir/clean
 
 CMakeFiles/Isbn.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione" "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione" "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\build" "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\build" "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\build\CMakeFiles\Isbn.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione" "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione" "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\build" "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\build" "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\build\CMakeFiles\Isbn.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/Isbn.dir/depend
 

@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione"
+CMAKE_SOURCE_DIR = "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\build"
+CMAKE_BINARY_DIR = "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Date.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/Date.dir/flags.make
 
 CMakeFiles/Date.dir/src/Date.cpp.obj: CMakeFiles/Date.dir/flags.make
 CMakeFiles/Date.dir/src/Date.cpp.obj: CMakeFiles/Date.dir/includes_CXX.rsp
-CMakeFiles/Date.dir/src/Date.cpp.obj: C:/Users/Claudio/Desktop/Laboratorio\ di\ programmazione/Laboratorio-di-programmazione/Laboratorio-di-programmazione/src/Date.cpp
+CMakeFiles/Date.dir/src/Date.cpp.obj: C:/Users/claud/Desktop/Lab\ di\ programmazione/Laboratorio-di-programmazione/src/Date.cpp
 CMakeFiles/Date.dir/src/Date.cpp.obj: CMakeFiles/Date.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Date.dir/src/Date.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Date.dir/src/Date.cpp.obj -MF CMakeFiles\Date.dir\src\Date.cpp.obj.d -o CMakeFiles\Date.dir\src\Date.cpp.obj -c "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\src\Date.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Date.dir/src/Date.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Date.dir/src/Date.cpp.obj -MF CMakeFiles\Date.dir\src\Date.cpp.obj.d -o CMakeFiles\Date.dir\src\Date.cpp.obj -c "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\src\Date.cpp"
 
 CMakeFiles/Date.dir/src/Date.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Date.dir/src/Date.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\src\Date.cpp" > CMakeFiles\Date.dir\src\Date.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\src\Date.cpp" > CMakeFiles\Date.dir\src\Date.cpp.i
 
 CMakeFiles/Date.dir/src/Date.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Date.dir/src/Date.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\src\Date.cpp" -o CMakeFiles\Date.dir\src\Date.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\src\Date.cpp" -o CMakeFiles\Date.dir\src\Date.cpp.s
 
 # Object files for target Date
 Date_OBJECTS = \
@@ -93,7 +93,7 @@ Date_EXTERNAL_OBJECTS =
 libDate.a: CMakeFiles/Date.dir/src/Date.cpp.obj
 libDate.a: CMakeFiles/Date.dir/build.make
 libDate.a: CMakeFiles/Date.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libDate.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libDate.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\Date.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Date.dir\link.txt --verbose=$(VERBOSE)
 
@@ -106,6 +106,6 @@ CMakeFiles/Date.dir/clean:
 .PHONY : CMakeFiles/Date.dir/clean
 
 CMakeFiles/Date.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione" "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione" "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\build" "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\build" "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\build\CMakeFiles\Date.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione" "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione" "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\build" "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\build" "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\build\CMakeFiles\Date.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/Date.dir/depend
 

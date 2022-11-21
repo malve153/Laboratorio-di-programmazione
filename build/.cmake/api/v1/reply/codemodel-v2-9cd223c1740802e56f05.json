@@ -45,28 +45,28 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Book::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Book-Debug-9a15f14e341d27fab3c6.json",
+					"jsonFile" : "target-Book-Debug-816d5c05c0c1b710f01f.json",
 					"name" : "Book",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "Date::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Date-Debug-c108a2d4df94b7fa8577.json",
+					"jsonFile" : "target-Date-Debug-3d20810145fd4201e2cc.json",
 					"name" : "Date",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "Isbn::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Isbn-Debug-53d570b07bb8c8f228a8.json",
+					"jsonFile" : "target-Isbn-Debug-a9bf6bee87f7f58d8dc6.json",
 					"name" : "Isbn",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "main::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main-Debug-d937e2b5b5bd02357033.json",
+					"jsonFile" : "target-main-Debug-12d8d583c21676927bb2.json",
 					"name" : "main",
 					"projectIndex" : 0
 				}
@@ -76,8 +76,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/User/Documents/GitHub/Laboratorio-di-programmazione/build",
-		"source" : "C:/Users/User/Documents/GitHub/Laboratorio-di-programmazione"
+		"build" : "C:/Users/claud/Desktop/Lab di programmazione/Laboratorio-di-programmazione/build",
+		"source" : "C:/Users/claud/Desktop/Lab di programmazione/Laboratorio-di-programmazione"
 	},
 	"version" : 
 	{

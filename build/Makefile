@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione"
+CMAKE_SOURCE_DIR = "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\build"
+CMAKE_BINARY_DIR = "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\build\CMakeFiles" "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\build\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\build\CMakeFiles" "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\build\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Claudio\Desktop\Laboratorio di programmazione\Laboratorio-di-programmazione\Laboratorio-di-programmazione\build\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\build\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target

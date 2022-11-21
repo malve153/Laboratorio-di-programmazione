@@ -21,7 +21,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "C:/Program Files/CMake/share/cmake-3.25/Modules/CMakeNinjaFindMake.cmake"
+			"path" : "C:/Program Files/CMake/share/cmake-3.25/Modules/CMakeMinGWFindMake.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -782,8 +782,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "C:/Users/User/Documents/GitHub/Laboratorio-di-programmazione/build",
-		"source" : "C:/Users/User/Documents/GitHub/Laboratorio-di-programmazione"
+		"build" : "C:/Users/claud/Desktop/Lab di programmazione/Laboratorio-di-programmazione/build",
+		"source" : "C:/Users/claud/Desktop/Lab di programmazione/Laboratorio-di-programmazione"
 	},
 	"version" : 
 	{

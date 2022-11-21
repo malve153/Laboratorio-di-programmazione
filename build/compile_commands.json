@@ -1,22 +1,22 @@
 [
 {
-  "directory": "C:/Users/User/Documents/GitHub/Laboratorio-di-programmazione/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Users/User/Documents/GitHub/Laboratorio-di-programmazione/include -g -std=gnu++11 -o CMakeFiles\\Isbn.dir\\src\\Isbn.cpp.obj -c C:\\Users\\User\\Documents\\GitHub\\Laboratorio-di-programmazione\\src\\Isbn.cpp",
-  "file": "C:\\Users\\User\\Documents\\GitHub\\Laboratorio-di-programmazione\\src\\Isbn.cpp"
+  "directory": "C:/Users/claud/Desktop/Lab di programmazione/Laboratorio-di-programmazione/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/Isbn.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\Isbn.dir\\src\\Isbn.cpp.obj -c \"C:\\Users\\claud\\Desktop\\Lab di programmazione\\Laboratorio-di-programmazione\\src\\Isbn.cpp\"",
+  "file": "C:/Users/claud/Desktop/Lab di programmazione/Laboratorio-di-programmazione/src/Isbn.cpp"
 },
 {
-  "directory": "C:/Users/User/Documents/GitHub/Laboratorio-di-programmazione/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Users/User/Documents/GitHub/Laboratorio-di-programmazione/include -g -std=gnu++11 -o CMakeFiles\\Date.dir\\src\\Date.cpp.obj -c C:\\Users\\User\\Documents\\GitHub\\Laboratorio-di-programmazione\\src\\Date.cpp",
-  "file": "C:\\Users\\User\\Documents\\GitHub\\Laboratorio-di-programmazione\\src\\Date.cpp"
+  "directory": "C:/Users/claud/Desktop/Lab di programmazione/Laboratorio-di-programmazione/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/Date.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\Date.dir\\src\\Date.cpp.obj -c \"C:\\Users\\claud\\Desktop\\Lab di programmazione\\Laboratorio-di-programmazione\\src\\Date.cpp\"",
+  "file": "C:/Users/claud/Desktop/Lab di programmazione/Laboratorio-di-programmazione/src/Date.cpp"
 },
 {
-  "directory": "C:/Users/User/Documents/GitHub/Laboratorio-di-programmazione/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Users/User/Documents/GitHub/Laboratorio-di-programmazione/include -g -std=gnu++11 -o CMakeFiles\\Book.dir\\src\\Book.cpp.obj -c C:\\Users\\User\\Documents\\GitHub\\Laboratorio-di-programmazione\\src\\Book.cpp",
-  "file": "C:\\Users\\User\\Documents\\GitHub\\Laboratorio-di-programmazione\\src\\Book.cpp"
+  "directory": "C:/Users/claud/Desktop/Lab di programmazione/Laboratorio-di-programmazione/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/Book.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\Book.dir\\src\\Book.cpp.obj -c \"C:\\Users\\claud\\Desktop\\Lab di programmazione\\Laboratorio-di-programmazione\\src\\Book.cpp\"",
+  "file": "C:/Users/claud/Desktop/Lab di programmazione/Laboratorio-di-programmazione/src/Book.cpp"
 },
 {
-  "directory": "C:/Users/User/Documents/GitHub/Laboratorio-di-programmazione/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Users/User/Documents/GitHub/Laboratorio-di-programmazione/include -g -std=gnu++11 -o CMakeFiles\\main.dir\\src\\main.cpp.obj -c C:\\Users\\User\\Documents\\GitHub\\Laboratorio-di-programmazione\\src\\main.cpp",
-  "file": "C:\\Users\\User\\Documents\\GitHub\\Laboratorio-di-programmazione\\src\\main.cpp"
+  "directory": "C:/Users/claud/Desktop/Lab di programmazione/Laboratorio-di-programmazione/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\main.dir\\src\\main.cpp.obj -c \"C:\\Users\\claud\\Desktop\\Lab di programmazione\\Laboratorio-di-programmazione\\src\\main.cpp\"",
+  "file": "C:/Users/claud/Desktop/Lab di programmazione/Laboratorio-di-programmazione/src/main.cpp"
 }
 ]
