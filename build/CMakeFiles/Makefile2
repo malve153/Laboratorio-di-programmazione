@@ -162,8 +162,8 @@ CMakeFiles/Book.dir/clean:
 
 # All Build rule for target.
 CMakeFiles/main.dir/all: CMakeFiles/Isbn.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/Book.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/Date.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/Book.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\claud\Desktop\Lab di programmazione\Laboratorio-di-programmazione\build\CMakeFiles" --progress-num=7,8 "Built target main"
